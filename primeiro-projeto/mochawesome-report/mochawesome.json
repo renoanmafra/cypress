@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-25T15:44:55.965Z",
+    "end": "2022-05-25T15:45:13.465Z",
+    "duration": 17500,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3dfb26ae-52a2-43b9-85f4-1725fd26ab0a",
+      "title": "",
+      "fullFile": "cypress/integration/3-ALURAPIC/alurapic.spec.js",
+      "file": "cypress/integration/3-ALURAPIC/alurapic.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a889c28f-1ed7-4159-9d55-5c6e3e817608",
+          "title": "Login e registro de usuários alura pic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifica mensagens validacao",
+              "fullTitle": "Login e registro de usuários alura pic verifica mensagens validacao",
+              "timedOut": null,
+              "duration": 3498,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Email is required').should('be.visible');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Full name is required').should('be.visible');\ncy.contains('ap-vmessage', 'User name is required').should('be.visible');\ncy.contains('ap-vmessage', 'Password is required').should('be.visible');",
+              "err": {},
+              "uuid": "1255c5b6-386d-49ff-8ce8-e5f84db3bc77",
+              "parentUUID": "a889c28f-1ed7-4159-9d55-5c6e3e817608",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica mensagem de email inválido",
+              "fullTitle": "Login e registro de usuários alura pic verifica mensagem de email inválido",
+              "timedOut": null,
+              "duration": 1499,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.get('input[formcontrolname=\"email\"]').type('Renoan');\ncy.contains('ap-vmessage', 'Invalid e-mail').should('be.visible');",
+              "err": {},
+              "uuid": "fcde352d-7077-4252-b993-4cada65ca4e2",
+              "parentUUID": "a889c28f-1ed7-4159-9d55-5c6e3e817608",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica mensagem de senha com menos de 8 caracteres",
+              "fullTitle": "Login e registro de usuários alura pic verifica mensagem de senha com menos de 8 caracteres",
+              "timedOut": null,
+              "duration": 1508,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.get('input[formcontrolname=\"password\"]').type('123');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');",
+              "err": {},
+              "uuid": "148e47f5-001c-46a4-b138-d908649db5cf",
+              "parentUUID": "a889c28f-1ed7-4159-9d55-5c6e3e817608",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica mensagem de que o nome do usuário deve estar em minúsculo",
+              "fullTitle": "Login e registro de usuários alura pic verifica mensagem de que o nome do usuário deve estar em minúsculo",
+              "timedOut": null,
+              "duration": 1683,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.get('input[formcontrolname=\"userName\"]').type('RENOAN');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Must be lower case').should('be.visible');",
+              "err": {},
+              "uuid": "a407f878-cf1b-4f67-81b2-41eb5c14c677",
+              "parentUUID": "a889c28f-1ed7-4159-9d55-5c6e3e817608",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1255c5b6-386d-49ff-8ce8-e5f84db3bc77",
+            "fcde352d-7077-4252-b993-4cada65ca4e2",
+            "148e47f5-001c-46a4-b138-d908649db5cf",
+            "a407f878-cf1b-4f67-81b2-41eb5c14c677"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8188,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
